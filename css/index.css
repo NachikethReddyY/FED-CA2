@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+body{
+    font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #000000, #1a1a1a);
+      color: white;
+      min-height: 100vh;
+      min-height: 100dvh; /* Dynamic viewport height for mobile */
+      overflow-x: hidden;
+      position: relative;
+    }
+    .background-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: 0;
+    }
+    .navbar {
+      background: transparent;
+      z-index: 10;
+    padding: 1rem 0;
+    }
+    .navbar-logo {
+      width: 30px;
+    }
+    .brand {
+      font-weight: 700;
+    }
+    .glass-button, .mobile-menu {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 12px;
+    }
+    /* Neon/cyber glass button with fun interactive effect */
+.glass-button {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  font-family: 'Orbitron', 'SF Pro', 'Courier New', monospace, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.18);
+  box-shadow: 0 2px 24px 0 rgba(0,188,212,0.08), 0 0 32px 0 #F6FF0022 inset;
+  border-radius: 16px;
+  padding: 12px 32px;
+  transition: box-shadow 0.2s, background 0.2s, transform 0.15s, color 0.2s;
+  z-index: 1;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.glass-button:before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  left: var(--glass-x, 50%);
+  top: var(--glass-y, 50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(246,255,0,0.25) 0%, rgba(246,255,0,0.12) 40%, transparent 80%);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  transition: opacity 0.25s, width 0.25s, height 0.25s;
+  z-index: 0;
+}
+.glass-button:hover:before {
+  width: 320px;
+  height: 320px;
+  opacity: 1;
+}
+.glass-button:hover {
+  color: #F6FF00;
+  box-shadow: 0 0 32px 8px #F6FF0044, 0 0 40px 0 #00bcd4 inset;
+  background: rgba(255,255,255,0.13);
+}
+.glass-button:active {
+  transform: scale(0.97) rotate(1deg);
+  box-shadow: 0 0 16px 2px #00bcd4, 0 0 24px 0 #F6FF00 inset;
+}
+.glass-button:hover:before {
+  width: 180%;
+  height: 180%;
+  opacity: 0.15;
+}
+
+/* Fun ripple effect on click */
+.glass-button .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple-effect 0.5s linear;
+  background: rgba(246,255,0,0.4);
+  pointer-events: none;
+  z-index: 2;
+}
+@keyframes ripple-effect {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+    .glass-button {
+      padding: 10px 20px;
+      transition: transform 0.3s ease;
+      text-decoration: none;
+    display: inline-block;
+    }
+    .glass-button:hover {
+      transform: scale(1.05);
+      background: rgba(0, 188, 212, 0.1);
+      color: white;
+    }
+    .back-to-home {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .back-to-home:hover {
+      color: #00bcd4;
+    }
+     .back-to-home:hover .logoimg {
+      transform: rotate(360deg);
+      filter: brightness(0) saturate(100%) invert(61%) sepia(68%) saturate(481%) hue-rotate(147deg) brightness(91%) contrast(87%);
+    }
+
+    .logoimg {
+      margin-right: 10px;
+      transition: transform 0.5s ease, filter 0.3s ease;
+      filter: brightness(1);
+    }
+    .mobile-menu {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 1rem;
+      z-index: 100;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-menu.show {
+      display: block;
+      opacity: 1;
+    }
+    .hero, .offering-section, .journey-section { /* Apply similar height and centering to all main sections */
+      position: relative;
+      padding: 2rem 1rem;
+      z-index: 1;
+      min-height: calc(100vh - 80px); /* Adjust for navbar */
+      min-height: calc(100dvh - 80px); /* Dynamic viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 2rem 1rem;
+      z-index: 1;
+      min-height: calc(100vh - 80px); /* Adjust for navbar */
+      min-height: calc(100dvh - 80px); /* Dynamic viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font size */
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+    }
+    .hero p {
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      margin-bottom: 1rem;
+      max-width: 600px;
+    }
+    .highlight {
+      font-style: italic;
+        font-family: 'Libre Caslon Text', serif;
+      font-weight: 600;
+      background: linear-gradient(90deg, #F6FF00, #EC4899, #A855F7, #6366F1);
+      -webkit-background-clip: text;
+      background-clip: text; /* Added for compatibility */
+      -webkit-text-fill-color: transparent;
+    }
+    .pulse-dot {
+      height: 10px;
+      width: 10px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1s infinite;
+      margin-right: 8px;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.5); opacity: 0.5; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+.mobileMenu{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 12px;
+        padding: 1rem;
+        z-index: 100;
+        opacity: 0;
+        display: none;
+        transition: opacity 0.3s ease;
+    }
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    /* Mobile-specific adjustments for all sections */
+    @media (max-width: 768px) {
+      .hero, .offering-section, .journey-section {
+        padding: 1rem;
+        min-height: calc(100vh - 60px);
+        min-height: calc(100dvh - 60px);
+      }
+
+      .background-glow {
+        width: 300px;
+        height: 300px;
+        top: 55%;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .brand {
+        font-size: 1.1rem;
+      }
+
+      .logoimg {
+        width: 20px !important;
+      }
+    }
+
+ #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100dvh;
+      width: 100%;
+      background: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .intro-line {
+      font-size: 2rem;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .typed-text {
+      font-size: 1.1rem;
+      max-width: 600px;
+      text-align: center;
+      margin-top: 20px;
+      opacity: 0;
+    }
+
+    /* Why Learn Section Styles */
+    .why-learn-icon-container {
+      font-size: 4rem; /* Adjust size as needed */
+      color: #00bcd4; /* Bootstrap info color or any color you like */
+      margin-bottom: 20px;
+    }
+
+    .animated-icon {
+      animation: bounceAndGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes bounceAndGlow {
+      0% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+      }
+      50% {
+        transform: translateY(-15px) scale(1.1);
+        text-shadow: 0 0 20px rgba(0, 188, 212, 0.9), 0 0 30px rgba(0, 188, 212, 0.7);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        text-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+      }
+    }
+
+    /* Offering Section Icon Animation */
+    .offering-section .animated-icon {
+      animation: rotateAndBounce 2.5s infinite ease-in-out;
+      color: #F6FF00; /* Example: a color from your highlight gradient */
+    }
+
+    @keyframes rotateAndBounce {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        text-shadow: 0 0 5px rgba(246, 255, 0, 0.5);
+      }
+      50% {
+        transform: translateY(-10px) rotate(10deg);
+        text-shadow: 0 0 20px rgba(246, 255, 0, 0.9), 0 0 30px rgba(246, 255, 0, 0.7);
+      }
+      100% {
+        transform: translateY(0) rotate(0deg);
+        text-shadow: 0 0 5px rgba(246, 255, 0, 0.5);
+      }
+    }
+
+    .glass-card {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 12px;
+      transition: transform 0.3s ease, background 0.3s ease;
+      display: flex; /* Make it a flex container */
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center horizontally */
+      text-align: center; /* Center text within the card */
+    }
+
+    .glass-card:hover {
+      transform: translateY(-5px);
+      background: rgba(0, 188, 212, 0.08); /* Slightly more opaque on hover */
+    }
+
+    .card-icon-top {
+      font-size: 3rem; /* Size of the card icon */
+      color: #00bcd4; /* Color of the card icon */
+      margin-bottom: 1rem; /* Space below the icon */
+    }
+
+    /* Journey Section Specific Styles */
+    .journey-section .animated-icon-static {
+      color: #a855f7; /* A purple from your highlight gradient */
+      /* No continuous animation for this one, it's static */
+    }
+
+    .journey-timeline-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 960px; /* Limit width for desktop */
+      margin: 50px auto 0 auto;
+      padding: 0 20px; /* Padding for mobile */
+    }
+
+    .journey-timeline-line {
+      position: absolute;
+      left: 50%; /* Center the line for desktop */
+      top: 0;
+      width: 4px; /* Thickness of the line */
+      height: 100%;
+      background: rgba(255, 255, 255, 0.1); /* Faint line background */
+      transform: translateX(-50%); /* Adjust for centering */
+    }
+
+    .timeline-line-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%; /* Starts at 0, will be animated to 100% */
+      background: linear-gradient(to bottom, #00bcd4, #a855f7); /* Gradient fill */
+    }
+
+    .journey-timeline-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 80px; /* Space between items */
+      width: 100%; /* Occupy full width for positioning */
+    }
+
+    .journey-timeline-item:last-child {
+      margin-bottom: 0; /* No margin after the last item */
+    }
+
+    .journey-timeline-item .glass-card {
+      width: calc(50% - 35px); /* Half width minus space for line/dot (2px line + 12.5px dot radius + 20px gap) */
+      flex-shrink: 0; /* Prevent shrinking */
+      opacity: 0; /* Start hidden for GSAP animation */
+      transform: translateY(50px) scale(0.8); /* Start transformed for GSAP */
+    }
+
+    .journey-timeline-item.timeline-item-left {
+      justify-content: flex-start;
+      padding-right: 35px; /* Space for line and dot */
+    }
+
+    .journey-timeline-item.timeline-item-right {
+      justify-content: flex-end;
+      padding-left: 35px; /* Space for line and dot */
+    }
+
+    .timeline-dot {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: #00bcd4;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      z-index: 2;
+      left: calc(50% - 11px); /* Shift 6px left on desktop */
+      transform: translateX(-50%) scale(0); /* Start hidden for GSAP */
+      opacity: 0; /* Start hidden for GSAP */
+    }
+
+    /* Mobile Responsiveness for Timeline */
+    @media (max-width: 767.98px) {
+      .journey-timeline-wrapper {
+        padding: 0 15px; /* Adjust padding for smaller screens */
+      }
+
+      .journey-timeline-line {
+        left: 20px; /* Move line to the left for mobile */
+        transform: translateX(0);
+      }
+
+      .journey-timeline-item {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align cards to the left for mobile */
+        margin-bottom: 40px; /* Less space between items on mobile */
+        padding-left: 50px; /* Space for the line and dot on the left */
+        padding-right: 0; /* Remove right padding */
+      }
+
+      .journey-timeline-item .glass-card {
+        width: 100%; /* Full width for cards on mobile */
+        max-width: none; /* Remove max-width constraint */
+        text-align: left; /* Align text left within cards on mobile */
+        align-items: flex-start; /* Align card content to start */
+      }
+
+      .journey-timeline-item.timeline-item-left,
+      .journey-timeline-item.timeline-item-right {
+        padding-right: 0; /* No right padding on mobile */
+        padding-left: 50px; /* Consistent left padding for all items */
+        justify-content: flex-start; /* Align content to start */
+      }
+
+      .journey-timeline-item .timeline-dot {
+        /* Position dots correctly on mobile line:
+           Line's left edge is at 20px, width 4px, so center is at 22px.
+           Dot width is 25px, half width is 12.5px.
+           To center dot on line, its left edge should be 22px - 12.5px = 9.5px.
+           We use left: 20px (line's left edge) and transform: translateX(-50%) to center it on the line.
+           This positions the dot's center at the line's center.
+        */
+        left: -6px; /* Position at the line's left edge */
+        transform: translateX(-50%); /* Shift left by half its width to center on the line */
+      }
+    }
+ 
+    
+
+        /* Meet the Team Section Styles */
+    .team-section .animated-icon-static {
+      color: #EC4899; /* A pink color from your highlight gradient */
+    }
+
+    .team-member-card {
+      /* Inherits glass-card styles */
+      margin-top: 20px; /* Space from heading/paragraph */
+      padding: 1.5rem; /* Re-added padding to the main card for content */
+      position: relative;
+      /* Removed min-height to allow content to dictate height */
+      cursor: pointer;
+      perspective: 1000px; /* For 3D effect */
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+      justify-content: flex-start; /* Align content to the top */
+      align-items: center; /* Center content horizontally */
+      background: rgba(255, 255, 255, 0.05); /* Restore card background */
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Restore card border */
+    }
+
+    /* Remove flip animation and make half the image stick out above the card */
+    .image-flip-container {
+        position: relative;
+        width: 150px;
+        height: 110px; /* 40px out, 110px in (for 150px image) */
+        margin-top: -40px; /* Pull up so only 40px sticks out */
+        margin-bottom: 10px;
+        z-index: 2;
+        background: none;
+        box-shadow: none;
+        transform: none;
+        border-radius: 75px 75px 0 0 / 75px 75px 0 0; /* Top half circle */
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .image-flip-front {
+        position: static;
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        overflow: visible;
+        box-shadow: 0 4px 24px 0 rgba(0,188,212,0.15);
+        background: none;
+    }
+    .image-flip-front img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #fff;
+        box-shadow: 0 8px 32px 0 rgba(0,188,212,0.18);
+        background: #fff;
+        position: relative;
+        z-index: 2;
+        display: block;
+    }
+    .image-flip-back {
+        display: none !important;
+    }
+
+    /* Specific styles for team member card text clarity and spacing */
+    .team-member-card p {
+        color: rgba(255, 255, 255, 0.9); /* Increased opacity for better visibility */
+        line-height: 1.6; /* Improve readability */
+        margin-bottom: 1rem; /* Default margin for paragraphs */
+    }
+
+    .team-member-card .text-info {
+        color: #00bcd4 !important; /* Ensure role text is vibrant */
+        margin-bottom: 0.8rem; /* Increased spacing below role for better separation */
+    }
+
+    .team-member-card .team-bio {
+        font-size: 0.95rem; /* Slightly larger for readability */
+        margin-top: 1.2rem; /* Increased space above bio */
+        margin-bottom: 1.8rem; /* Increased space below bio */
+    }
+
+    /* Social Icons as Circular Buttons */
+    .social-icons-container {
+        margin-top: 1.5rem; /* Move container up into the box */
+        margin-bottom: 0; /* Remove default margin-bottom if any */
+        padding-bottom: 0; /* Ensure no extra padding pushes it down */
+        width: 100%; /* Allow flexbox to distribute space */
+        display: flex; /* Ensure flexbox properties apply */
+        justify-content: center; /* Center buttons horizontally */
+        flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+        gap: 15px; /* Space between buttons */
+    }
+
+    .social-icon-btn {
+        display: inline-flex; /* Use inline-flex for circular buttons */
+        justify-content: center;
+        align-items: center;
+        width: 45px; /* Size of the circular button */
+        height: 45px; /* Size of the circular button */
+        border-radius: 50%; /* Make it circular */
+        background: rgba(255, 255, 255, 0.1); /* Default background */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white; /* Icon color */
+        text-decoration: none;
+        transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        position: relative; /* For glow pseudo-element */
+        overflow: hidden; /* Hide overflow for glow */
+        z-index: 1; /* Ensure it's above other elements if needed */
+    }
+
+    .social-icon-btn i {
+        position: relative;
+        z-index: 2; /* Ensure icon is above glow */
+    }
+
+    .social-icon-btn:hover {
+        background: rgba(0, 188, 212, 0.2); /* Change background on hover */
+        transform: translateY(-3px) scale(1.05); /* Slight lift and scale */
+        box-shadow: 0 0 15px 5px rgba(0, 188, 212, 0.7), /* Stronger glow */
+                    0 0 30px 10px rgba(0, 188, 212, 0.5); /* Wider light emission */
+    }
+
+    /* Ensure the back of the card also has proper padding for the logo */
+    .card-back {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    /* Section heading font size for all main sections */
+.hero h1,
+.why-learn-section h2,
+.offering-section h2,
+.journey-section h2,
+.team-section h2,
+.testimonials-section h2,
+.cta-section h2 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+  /* Stats Section Styles */
+    .stats-section .stats-heading,
+    .stats-section .stats-paragraph {
+      opacity: 0; /* Hidden initially for GSAP animation */
+      transform: translateY(30px); /* Offset for slide-up effect */
+    }
+
+    .stats-card {
+      opacity: 1;
+      transform: none;
+      transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+      background: rgba(30, 30, 40, 0.7);
+      box-shadow: 0 0 24px 0 #00bcd4aa;
+      border: 1.5px solid #00bcd4;
+    }
+
+    .stats-card.stats-card-animate {
+      opacity: 0;
+      transform: translateY(50px) scale(0.8);
+    }
+
+    /* New cyber button style */
+.cyber-button {
+  position: relative;
+  display: inline-block;
+  font-family: 'Orbitron', 'SF Pro', 'Courier New', monospace, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #F6FF00;
+  background: linear-gradient(90deg, #1a1a1a 60%, #2d1a3a 100%);
+  border: 2.5px solid #F6FF00;
+  border-radius: 18px;
+  padding: 12px 36px;
+  box-shadow: 0 0 18px 2px #F6FF00, 0 0 32px 0 #00bcd4 inset;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.cyber-button:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  border-radius: 18px;
+  background: linear-gradient(120deg, transparent 60%, #F6FF00 100%);
+  opacity: 0.12;
+  z-index: 0;
+  transition: opacity 0.3s;
+}
+.cyber-button:hover {
+  color: #00bcd4;
+  background: linear-gradient(90deg, #2d1a3a 60%, #1a1a1a 100%);
+  box-shadow: 0 0 32px 6px #00bcd4, 0 0 40px 0 #F6FF00 inset;
+  transform: scale(1.07) rotate(-1deg);
+}
+.cyber-button:active {
+  transform: scale(0.97) rotate(1deg);
+  box-shadow: 0 0 16px 2px #F6FF00, 0 0 24px 0 #00bcd4 inset;
+}
+
+
+.footer {
+  background: rgba(20, 20, 30, 0.85);
+  border-top: 1.5px solid rgba(0, 255, 255, 0.08);
+  box-shadow: 0 0 40px 0 #00bcd4aa;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.footer-logo {
+  height: 38px;
+  filter: drop-shadow(0 0 8px #00ffd0cc);
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), filter 0.3s;
+}
+.footer-logo:hover {
+  transform: scale(1.12) rotate(-6deg);
+  filter: drop-shadow(0 0 18px #00ffd0) brightness(1.2);
+}
+.footer-quote {
+  font-family: 'Orbitron', 'monospace', sans-serif;
+  font-size: 1.1rem;
+  color: #00ffd0;
+  text-shadow: 0 0 8px #00ffd055;
+  letter-spacing: 1px;
+  font-style: italic;
+  opacity: 0.92;
+}
+.footer-text {
+  font-size: 0.98rem;
+  color: #b0eaff;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
