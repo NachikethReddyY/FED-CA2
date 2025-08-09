@@ -938,8 +938,8 @@ function showCourseModal(courseType) {
             projects: ['Mobile App Design', 'Website Redesign', 'Design System'],
             skills: ['Design Thinking', 'Figma Mastery', 'Color Theory', 'User Research']
         },
-        'bootstrap-easy-road': {
-            title: 'Easy Road with Bootstrap',
+        'rapid-bootstrap': {
+            title: 'Rapid Bootstrap',
             description: 'Build professional websites quickly using Bootstrap 5 framework.',
             duration: '4 weeks',
             level: 'Beginner',
@@ -1168,8 +1168,8 @@ const courseData = {
         prerequisites: 'None! Just bring your creativity and willingness to learn.',
         instructor: 'Jordan Kim, 21 - UI/UX Designer at a leading design agency'
     },
-    'bootstrap-easy-road': {
-        title: 'Easy Road with Bootstrap',
+    'rapid-bootstrap': {
+        title: 'Rapid Bootstrap',
         tagline: 'Build responsive sites quickly',
         description: 'Master Bootstrap 5 to build professional websites in record time. Learn component-based design and responsive frameworks.',
         duration: '4 weeks',
@@ -1444,7 +1444,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const w = container.offsetWidth;
     const h = container.offsetHeight;
     const blockH = w < 700 ? (w < 500 ? 36 : 54) : 70;
-    const blockGap = w < 700 ? (w < 500 ? 8 : 14) : 22;
+    // Increase blockGap for more spacing between blocks
+    const blockGap = w < 700 ? (w < 500 ? 16 : 24) : 36;
     // The line is now below the first row
     const lineY = w < 700 ? (w < 500 ? h - 28 : h - 68) : h - 90;
     let positions = [];
@@ -1481,7 +1482,11 @@ document.addEventListener('DOMContentLoaded', function () {
       const div = document.createElement('div');
       div.className = `tech-block ${pos.style}`;
       div.textContent = pos.tech;
-      div.style.left = `${pos.left}px`;
+      // Move React and JavaScript blocks even further to the right
+      let left = pos.left;
+      if (pos.tech === 'JavaScript') left += 35; // was 36
+      if (pos.tech === 'React') left += 160; // was 60
+      div.style.left = `${left}px`;
       div.style.top = `-120px`;
       div.style.opacity = 0;
       wall.appendChild(div);
@@ -1525,7 +1530,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function dropRowsSequentially(idx) {
           if (idx < rowsToDrop) {
             dropRow(idx);
-            setTimeout(() => dropRowsSequentially(idx + 1), 180 * wallRows[idx] + 120);
+            setTimeout(() => dropRowsSequentially(idx + 1), 170 * wallRows[idx] + 190);
           } else {
             droppedRows = rowsToDrop;
             dropping = false;

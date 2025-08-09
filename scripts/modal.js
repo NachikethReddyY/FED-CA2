@@ -316,8 +316,8 @@ class CourseModal {
         prerequisites: 'None! Just bring your creativity and willingness to learn.',
         instructor: 'Nachiketh Reddy - UI/UX Designer and design educator'
       },
-      'bootstrap-easy-road': {
-        title: 'Easy Road with Bootstrap',
+      'rapid-bootstrap': {
+        title: 'Rapid Bootstrap',
         tagline: 'Build responsive sites quickly',
         description: 'Master Bootstrap 5 to build professional websites in record time. Learn component-based design and responsive frameworks.',
         duration: '4 weeks',
