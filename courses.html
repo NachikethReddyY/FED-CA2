@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - LaunchCode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/navigation.css" rel="stylesheet">
+    <link href="styles/modal.css" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Logo for mobile, above hero section -->
+    <div class="mobile-logo-bar d-lg-none" style="width:100%;padding:24px 0 0 0;display:flex;justify-content:left;align-items:center;position:relative;z-index:1;">
+        <a class="navbar-brand logo-brand" href="index.html" style="margin-left:24px;">
+            <i class="fas fa-rocket me-2"></i>LaunchCode
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav d-none d-lg-flex">
+        <div class="container">
+            <a class="navbar-brand logo-brand" href="index.html" style="margin-left:0;">
+                <i class="fas fa-rocket me-2"></i>LaunchCode
+            </a>
+            <div class="nav-center">
+                <ul class="nav-capsule">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="signup.html" class="btn btn-primary nav-cta-btn" style="margin-right:0;">
+                    <i class="fas fa-user-plus me-1"></i>Register Interest
+                </a>
+            </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <div class="mobile-nav-content">
+        <ul class="mobile-nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="signup.html" class="btn btn-primary nav-cta-btn" style="width:100%;text-align:center;">
+                <i class="fas fa-user-plus me-1"></i>Register Interest
+            </a>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="hero-title mb-4">
+                        Master <span class="neon-text">Frontend</span> Skills That 
+                        <span class="gradient-text-new">Actually Matter</span>
+                    </h1>
+                    <p class="hero-subtitle">Choose your path to frontend mastery. Each course is designed for 16-year-olds, taught by young developers who understand your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Grid -->
+    <section class="courses-grid py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Course 1: Atomic HTML & CSS -->
+                <div class="col-lg-6 mb-4">
+                    <div class="course-card glass-card" data-course="atomic-html-css">
+                        <div class="course-header">
+                            <div class="course-badge">
+                                <span class="badge neon-badge">FOUNDATION</span>
+                            </div>
+                            <h3>Atomic HTML & CSS</h3>
+                            <p class="course-tagline">Build the foundation of web development</p>
+                        </div>
+                        
+                        <div class="course-description">
+                            <p>Master the building blocks of the web. Learn semantic HTML5 and modern CSS3 techniques to create beautiful, responsive websites from scratch.</p>
+                        </div>
+
+                        <div class="course-pricing">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">0.99</span>
+                                <span class="price-period">/week</span>
+                            </div>
+                            <p class="price-note">6-week course</p>
+                        </div>
+
+                        <div class="course-actions">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light w-50" data-course-detail="atomic-html-css">
+                                    <i class="fas fa-info-circle me-1"></i>Show Details
+                                </button>
+                                <a class="btn btn-primary neon-btn w-50" href="signup.html?course=Atomic%20HTML%20%26%20CSS">
+                                    <i class="fas fa-rocket me-2"></i>Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: Interactive JavaScript -->
+                <div class="col-lg-6 mb-4">
+                    <div class="course-card glass-card" data-course="interactive-javascript">
+                        <div class="course-header">
+                            <div class="course-badge">
+                                <span class="badge trending-badge">POPULAR</span>
+                            </div>
+                            <h3>Interactive JavaScript</h3>
+                            <p class="course-tagline">Bring your websites to life</p>
+                        </div>
+                        
+                        <div class="course-description">
+                            <p>Learn modern JavaScript to create interactive, dynamic websites. From DOM manipulation to API integration, master the language of the web.</p>
+                        </div>
+
+                        <div class="course-pricing">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">2</span>
+                                <span class="price-period">/week</span>
+                            </div>
+                            <p class="price-note">8-week course</p>
+                        </div>
+
+                        <div class="course-actions">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light w-50" data-course-detail="interactive-javascript">
+                                    <i class="fas fa-info-circle me-1"></i>Show Details
+                                </button>
+                                <a class="btn btn-primary neon-btn w-50" href="signup.html?course=Interactive%20JavaScript">
+                                    <i class="fas fa-rocket me-2"></i>Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: UI/UX Design -->
+                <div class="col-lg-6 mb-4">
+                    <div class="course-card glass-card" data-course="ui-ux-design">
+                        <div class="course-header">
+                            <div class="course-badge">
+                                <span class="badge creative-badge">CREATIVE</span>
+                            </div>
+                            <h3>UI/UX Design</h3>
+                            <p class="course-tagline">Design beautiful user experiences</p>
+                        </div>
+                        
+                        <div class="course-description">
+                            <p>Learn design thinking and create stunning user interfaces. Master Figma, design systems, and user experience principles.</p>
+                        </div>
+
+                        <div class="course-pricing">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">12</span>
+                                <span class="price-period">/Lifetime Access</span>
+                            </div>
+                            <p class="price-note">7-week course</p>
+                        </div>
+
+                        <div class="course-actions">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light w-50" data-course-detail="ui-ux-design">
+                                    <i class="fas fa-info-circle me-1"></i>Show Details
+                                </button>
+                                <a class="btn btn-primary neon-btn w-50" href="signup.html?course=UI%2FUX%20Design">
+                                    <i class="fas fa-rocket me-2"></i>Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 4: Easy Road with Bootstrap -->
+                <div class="col-lg-6 mb-4">
+                    <div class="course-card glass-card" data-course="bootstrap-easy-road">
+                        <div class="course-header">
+                            <div class="course-badge">
+                                <span class="badge fast-badge">FAST TRACK</span>
+                            </div>
+                            <h3>Easy Road with Bootstrap</h3>
+                            <p class="course-tagline">Build responsive sites quickly</p>
+                        </div>
+                        
+                        <div class="course-description">
+                            <p>Master Bootstrap 5 to build professional websites in record time. Learn component-based design and responsive frameworks.</p>
+                        </div>
+
+                        <div class="course-pricing">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">0.50</span>
+                                <span class="price-period">/week</span>
+                            </div>
+                            <p class="price-note">4-week course</p>
+                        </div>
+
+                        <div class="course-actions">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light w-50" data-course-detail="bootstrap-easy-road">
+                                    <i class="fas fa-info-circle me-1"></i>Show Details
+                                </button>
+                                <a class="btn btn-primary neon-btn w-50" href="signup.html?course=Easy%20Road%20with%20Bootstrap">
+                                    <i class="fas fa-rocket me-2"></i>Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 5: React Apps -->
+                <div class="col-lg-6 mb-4">
+                    <div class="course-card glass-card" data-course="react-apps">
+                        <div class="course-header">
+                            <div class="course-badge">
+                                <span class="badge advanced-badge">ADVANCED</span>
+                            </div>
+                            <h3>React Apps</h3>
+                            <p class="course-tagline">Build modern web applications</p>
+                        </div>
+                        
+                        <div class="course-description">
+                            <p>Master React to build powerful, scalable web applications. Learn hooks, state management, and modern development practices.</p>
+                        </div>
+
+                        <div class="course-pricing">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">79</span>
+                                <span class="price-period">/month</span>
+                            </div>
+                            <p class="price-note">10-week course</p>
+                        </div>
+
+                        <div class="course-actions">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light w-50" data-course-detail="react-apps">
+                                    <i class="fas fa-info-circle me-1"></i>Show Details
+                                </button>
+                                <a class="btn btn-primary neon-btn w-50" href="signup.html?course=React%20Apps">
+                                    <i class="fas fa-rocket me-2"></i>Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 6: AI & Prompt Engineering -->
+                <div class="col-lg-6 mb-4">
+                    <div class="course-card glass-card" data-course="ai-prompt-engineering">
+                        <div class="course-header">
+                            <div class="course-badge">
+                                <span class="badge hot-badge">🔥 HOT</span>
+                            </div>
+                            <h3>AI & Prompt Engineering</h3>
+                            <p class="course-tagline">Build with AI assistance</p>
+                        </div>
+                        
+                        <div class="course-description">
+                            <p>Learn to leverage AI tools like Bolt and Lovable to accelerate your development. Master prompt engineering and AI-assisted coding.</p>
+                        </div>
+
+                        <div class="course-pricing">
+                            <div class="price">
+                                <span class="price-currency">$</span>
+                                <span class="price-amount">23</span>
+                                <span class="price-period">/Lifetime Access</span>
+                            </div>
+                            <p class="price-note">6-week course</p>
+                        </div>
+
+                        <div class="course-actions">
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-light w-50" data-course-detail="ai-prompt-engineering">
+                                    <i class="fas fa-info-circle me-1"></i>Show Details
+                                </button>
+                                <a class="btn btn-primary neon-btn w-50" href="signup.html?course=AI%20%26%20Prompt%20Engineering">
+                                    <i class="fas fa-rocket me-2"></i>Sign Up
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title mb-5">You're Never Coding Alone</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="support-item glass-card">
+                        <div class="support-icon">
+                            <i class="fas fa-user-friends neon-text"></i>
+                        </div>
+                        <h4>Personal Mentorship</h4>
+                        <p>Weekly 1-on-1 sessions with young developers who've been where you want to go.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="support-item glass-card">
+                        <div class="support-icon">
+                            <i class="fab fa-discord neon-text"></i>
+                        </div>
+                        <h4>24/7 Discord Community</h4>
+                        <p>Get help instantly from instructors and fellow students in our active Discord server.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="support-item glass-card">
+                        <div class="support-icon">
+                            <i class="fas fa-project-diagram neon-text"></i>
+                        </div>
+                        <h4>Real Projects</h4>
+                        <p>Build actual applications you can show off to friends, family, and future employers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-4">
+                    <div class="footer-logos">
+                        <div class="logo-container">
+                            <img src="assets/sp.svg" alt="SP" style = "width: 75px">
+                            <div class="x-divider">×</div>
+                            <img src="assets/nachikethreddy.svg" alt="nachiketh Reddy" style = "width: 75px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="terminal-section">
+                        <div class="terminal-line">
+                            <span class="terminal-user">nachikethreddy</span>
+                            <span class="terminal-symbol">$</span>
+                            <span class="terminal-path">~</span>
+                            <span class="terminal-quote">"The only way to do great work is to love what you do"</span>
+                            <span class="terminal-hashtag">#CodeForChange</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Singapore</p>
+                        <p><i class="fas fa-phone me-2"></i>+65 8898 3832</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/ynr-nachiketh-reddy" class="social-link me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/nachikethreddyy" class="social-link me-3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:y.nachiketh.reddy@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-love">
+                        <p>Made with <i class="fas fa-heart text-danger"></i> by Nachiketh Reddy</p>
+                        <p>&copy; 2025 Nachiketh Reddy. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="scripts/main.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/modal.js"></script>
+
+</body>
+</html>

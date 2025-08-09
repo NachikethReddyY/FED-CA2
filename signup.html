@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Your Interest - LaunchCode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/navigation.css" rel="stylesheet">
+    <link href="styles/form.css" rel="stylesheet">
+    <link href="styles/footer.css" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html" style="position: fixed; top: 20px; left: 20px; z-index: 1000; background-color: aqua; padding: 10px; text-decoration: none; color: black; border-radius: 15px;  ">
+        <i class="fas fa-arrow-left me-1"></i>Back to Home
+    </a></a>
+
+    <!-- Registration Process -->
+    <section class="registration-process py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Progress Steps -->
+                    <div class="registration-progress mb-5">
+                        <div class="progress-steps">
+                            <div class="step active" data-step="1">
+                                <div class="step-circle">1</div>
+                                <div class="step-label">Basic Info</div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-circle">2</div>
+                                <div class="step-label">Preferences</div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-circle">3</div>
+                                <div class="step-label">Final Details</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Basic Information -->
+                    <div class="registration-step active" id="step-1">
+                        <div class="step-content glass-card">
+                            <h2 class="step-title text-center mb-4">Tell Us About Yourself</h2>
+                            
+                            <form class="registration-form" id="registrationForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="interestedCourse" class="form-label">Interested Course</label>
+                                    <select class="form-control" id="interestedCourse" required>
+                                        <option value="">Select a course</option>
+                                        <option value="Atomic HTML & CSS">Atomic HTML & CSS</option>
+                                        <option value="Interactive JavaScript">Interactive JavaScript</option>
+                                        <option value="UI/UX Design">UI/UX Design</option>
+                                        <option value="Easy Road with Bootstrap">Easy Road with Bootstrap</option>
+                                        <option value="React Apps">React Apps</option>
+                                        <option value="AI & Prompt Engineering">AI & Prompt Engineering</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label for="platform" class="form-label">Which platform will you be using?</label>
+                                    <div class="platform-icons" id="platformIcons">
+                                        <button type="button" class="platform-icon-btn" data-value="Windows" aria-label="Windows">
+                                            <i class="fab fa-windows"></i>
+                                            <span>Windows</span>
+                                        </button>
+                                        <button type="button" class="platform-icon-btn" data-value="Mac" aria-label="Mac">
+                                            <i class="fab fa-apple"></i>
+                                            <span>Mac</span>
+                                        </button>
+                                        <button type="button" class="platform-icon-btn" data-value="Linux" aria-label="Linux">
+                                            <i class="fab fa-linux"></i>
+                                            <span>Linux</span>
+                                        </button>
+                                        <button type="button" class="platform-icon-btn" data-value="Chromebook" aria-label="Chromebook">
+                                            <i class="fas fa-laptop"></i>
+                                            <span>Chromebook</span>
+                                        </button>
+                                        <button type="button" class="platform-icon-btn" data-value="Android" aria-label="Android">
+                                            <i class="fab fa-android"></i>
+                                            <span>Android</span>
+                                        </button>
+                                        <button type="button" class="platform-icon-btn" data-value="iOS" aria-label="iOS">
+                                            <i class="fab fa-apple"></i>
+                                            <span>iOS</span>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" id="platform" name="platform" required>
+                                </div>
+                            </form>
+                            
+                            <div class="step-actions text-center">
+                                <button class="btn btn-primary btn-lg neon-btn" id="continue-step-1">
+                                    <i class="fas fa-arrow-right me-2"></i>Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Preferences -->
+                    <div class="registration-step" id="step-2">
+                        <div class="step-content glass-card">
+                            <h2 class="step-title text-center mb-4">Your Coding Journey</h2>
+                            
+                            <!-- Experience Level Slider -->
+                            <div class="mb-4">
+                                <label class="form-label">Experience Level</label>
+                                <div class="slider-container" style="background: rgba(255,255,255,0.07);backdrop-filter: blur(10px);border-radius: 20px;padding: 32px 24px;box-shadow: 0 8px 32px rgba(0,0,0,0.18);border: 1px solid rgba(255,255,255,0.13);text-align: center;max-width: 420px;margin:0 auto;">
+                                    <div class="slider-wrapper" style="position: relative; width: 100%; height: 20px; display: flex; align-items: center; max-width: 400px; margin: 0 auto;">
+                                        <div class="slider-track" style="position: relative; width: 100%; height: 6px; background: rgba(255,255,255,0.3); border-radius: 3px; overflow: hidden;">
+                                            <div class="slider-fill" id="expSliderFill" style="position: absolute; top: 0; left: 0; height: 100%; background: linear-gradient(90deg, #00c6ff, #0072ff); border-radius: 3px; width: 0%; transition: width 0.1s ease-out; box-shadow: 0 0 20px rgba(0,114,255,0.5);"></div>
+                                        </div>
+                                        <div class="slider-handle" id="expSliderHandle" style="position: absolute; top: 50%; left: 0%; transform: translate(-50%, -50%); width: 24px; height: 24px; background: linear-gradient(135deg, #ffffff, #f0f0f0); border-radius: 50%; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border: 2px solid #0072ff; z-index: 10;"></div>
+                                    </div>
+                                    <div class="slider-labels" style="display: flex; justify-content: space-between; margin-top: 2px; font-size: 14px; color: #b0eaff;">
+                                        <span>Complete Beginner</span>
+                                        <span>Advanced</span>
+                                    </div>
+                                    
+                                    <div class="slider-value" id="expSliderValue" style="margin-top: 20px; font-size: 24px; font-weight: bold; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">1</div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Goals and Motivation -->
+                            <div class="mb-4">
+                                <label for="goals" class="form-label">Goals and Motivation</label>
+                                <textarea class="form-control no-paste" id="goals" rows="4" placeholder="Tell us what motivates you to learn coding..." minlength="6" maxlength="250" required></textarea>
+                                <div class="form-text">
+                                    <span id="goalCharCount">0</span>/250 characters (minimum 6)
+                                </div>
+                            </div>
+                            
+                            <!-- Technologies Interest -->
+                            <div class="mb-4">
+                                <label class="form-label">What technologies are you interested in? <small>(Future courses we may launch)</small></label>
+                                <div class="tech-bubbles">
+                                    <div class="tech-bubble" data-tech="HTML5 & CSS3">
+                                        <input type="checkbox" id="tech-html" value="HTML5 & CSS3">
+                                        <label for="tech-html">HTML5 & CSS3</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="JavaScript ES6+">
+                                        <input type="checkbox" id="tech-js" value="JavaScript ES6+">
+                                        <label for="tech-js">JavaScript ES6+</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="React">
+                                        <input type="checkbox" id="tech-react" value="React">
+                                        <label for="tech-react">React</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Vue.js">
+                                        <input type="checkbox" id="tech-vue" value="Vue.js">
+                                        <label for="tech-vue">Vue.js</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Angular">
+                                        <input type="checkbox" id="tech-angular" value="Angular">
+                                        <label for="tech-angular">Angular</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Node.js">
+                                        <input type="checkbox" id="tech-node" value="Node.js">
+                                        <label for="tech-node">Node.js</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Python">
+                                        <input type="checkbox" id="tech-python" value="Python">
+                                        <label for="tech-python">Python</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="TypeScript">
+                                        <input type="checkbox" id="tech-typescript" value="TypeScript">
+                                        <label for="tech-typescript">TypeScript</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="UI/UX Design">
+                                        <input type="checkbox" id="tech-design" value="UI/UX Design">
+                                        <label for="tech-design">UI/UX Design</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Mobile Development">
+                                        <input type="checkbox" id="tech-mobile" value="Mobile Development">
+                                        <label for="tech-mobile">Mobile Development</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="AI & Machine Learning">
+                                        <input type="checkbox" id="tech-ai" value="AI & Machine Learning">
+                                        <label for="tech-ai">AI & Machine Learning</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Blockchain">
+                                        <input type="checkbox" id="tech-blockchain" value="Blockchain">
+                                        <label for="tech-blockchain">Blockchain</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="DevOps">
+                                        <input type="checkbox" id="tech-devops" value="DevOps">
+                                        <label for="tech-devops">DevOps</label>
+                                    </div>
+                                    <div class="tech-bubble" data-tech="Cybersecurity">
+                                        <input type="checkbox" id="tech-security" value="Cybersecurity">
+                                        <label for="tech-security">Cybersecurity</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="step-actions text-center">
+                                <button class="btn btn-secondary btn-lg me-3" id="back-step-2">
+                                    <i class="fas fa-arrow-left me-2"></i>Back
+                                </button>
+                                <button class="btn btn-primary btn-lg neon-btn" id="continue-step-2">
+                                    <i class="fas fa-arrow-right me-2"></i>Continue
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Final Details -->
+                    <div class="registration-step" id="step-3">
+                        <div class="step-content glass-card">
+                            <h2 class="step-title text-center mb-4">Almost Done!</h2>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notifyEvents">
+                                    <label class="form-check-label" for="notifyEvents">
+                                        Are you interested in being notified about future events?
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notifyLaunch" checked>
+                                    <label class="form-check-label" for="notifyLaunch">
+                                        Are you interested in being contacted when the product is ready?
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="additionalComments" class="form-label">Additional Comments <small>(Optional)</small></label>
+                                <textarea class="form-control" id="additionalComments" rows="3" placeholder="Any additional thoughts or questions?"></textarea>
+                            </div>
+                            
+                            <div class="step-actions text-center">
+                                <button class="btn btn-secondary btn-lg me-3" id="back-step-3">
+                                    <i class="fas fa-arrow-left me-2"></i>Back
+                                </button>
+                                <button class="btn btn-primary btn-lg neon-btn" id="complete-registration">
+                                    <i class="fas fa-rocket me-2"></i>Register Interest
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-4">
+                    <div class="footer-logos">
+                        <div class="logo-container">
+                            <img src="assets/sp.svg" alt="SP" style = "width: 75px">
+                            <div class="x-divider">×</div>
+                            <img src="assets/nachikethreddy.svg" alt="nachiketh Reddy" style = "width: 75px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="terminal-section">
+                        <div class="terminal-line">
+                            <span class="terminal-user">nachikethreddy</span>
+                            <span class="terminal-symbol">$</span>
+                            <span class="terminal-path">~</span>
+                            <span class="terminal-quote">"The only way to do great work is to love what you do"</span>
+                            <span class="terminal-hashtag">#CodeForChange</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Singapore</p>
+                        <p><i class="fas fa-phone me-2"></i>+65 8898 3832</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/ynr-nachiketh-reddy" class="social-link me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/nachikethreddyy" class="social-link me-3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:y.nachiketh.reddy@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-love">
+                        <p>Made with <i class="fas fa-heart text-danger"></i> by Nachiketh Reddy</p>
+                        <p>&copy; 2025 Nachiketh Reddy. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/form.js"></script>
+    <script>
+        (function(){
+            const sliderHandle = document.getElementById('expSliderHandle');
+            const sliderFill = document.getElementById('expSliderFill');
+            const sliderValue = document.getElementById('expSliderValue');
+            const sliderWrapper = sliderHandle.closest('.slider-wrapper');
+            let isDragging = false;
+            let currentValue = 1;
+            function updateSlider(value) {
+                // Clamp value between 1 and 10
+                value = Math.max(1, Math.min(10, value));
+                currentValue = value;
+                // Convert value to percent for handle/fill (1-10 mapped to 0-100%)
+                const percent = ((value-1)/9)*100;
+                sliderHandle.style.left = percent + '%';
+                sliderFill.style.width = percent + '%';
+                sliderValue.textContent = Math.round(value);
+            }
+            function getValueFromPosition(clientX) {
+                const rect = sliderWrapper.getBoundingClientRect();
+                const relativeX = clientX - rect.left;
+                let percent = (relativeX / rect.width) * 100;
+                percent = Math.max(0, Math.min(100, percent));
+                // Map percent (0-100) to value (1-10)
+                let value = 1 + (percent/100)*9;
+                return Math.round(value);
+            }
+            sliderHandle.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                sliderHandle.classList.add('dragging');
+                sliderFill.classList.add('active');
+                e.preventDefault();
+            });
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    const value = getValueFromPosition(e.clientX);
+                    updateSlider(value);
+                }
+            });
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    sliderHandle.classList.remove('dragging');
+                    sliderFill.classList.remove('active');
+                }
+            });
+            sliderHandle.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                sliderHandle.classList.add('dragging');
+                sliderFill.classList.add('active');
+                e.preventDefault();
+            });
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) {
+                    const touch = e.touches[0];
+                    const value = getValueFromPosition(touch.clientX);
+                    updateSlider(value);
+                    e.preventDefault();
+                }
+            });
+            document.addEventListener('touchend', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    sliderHandle.classList.remove('dragging');
+                    sliderFill.classList.remove('active');
+                }
+            });
+            sliderWrapper.addEventListener('click', (e) => {
+                if (e.target !== sliderHandle) {
+                    const value = getValueFromPosition(e.clientX);
+                    updateSlider(value);
+                }
+            });
+            updateSlider(1);
+        })();
+    </script>
+</body>
+</html>

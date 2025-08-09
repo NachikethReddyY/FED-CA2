@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaunchCode - Your Coding Journey Starts Here</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="styles/navigation.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Logo for mobile, above hero section -->
+    <div class="mobile-logo-bar d-lg-none" style="width:100%;padding:24px 0 0 0;display:flex;justify-content:left;align-items:center;position:relative;z-index:1;">
+        <a class="navbar-brand logo-brand" href="index.html" style="margin-left:24px;">
+            <i class="fas fa-rocket me-2"></i>LaunchCode
+        </a>
+    </div>
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav d-none d-lg-flex">
+        <div class="container">
+            <a class="navbar-brand logo-brand" href="index.html" style="margin-left:0;">
+                <i class="fas fa-rocket me-2"></i>LaunchCode
+            </a>
+            <div class="nav-center">
+                <ul class="nav-capsule">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="signup.html" class="btn btn-primary nav-cta-btn" style="margin-right:0;">
+                    <i class="fas fa-user-plus me-1"></i>Register Interest
+                </a>
+            </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <div class="mobile-nav-content">
+        <ul class="mobile-nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+                <a href="signup.html" class="btn btn-primary nav-cta-btn" style="margin-right:0;">
+                    <i class="fas fa-user-plus me-1"></i>Register Interest
+                </a>
+            </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="pulsing-circle">
+                        <div class="pulse-dot"></div>
+                        <span>Actively Building</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Turn Your <span class="highlight">Ideas</span> Into <span class="highlight">Reality</span>
+                    </h1>
+                    <p class="hero-description">
+                        Join thousands of young developers aged 16+ who are transforming their creative ideas into powerful web applications and AI solutions. Start your coding journey today.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="courses.html" class="btn-primary">Start Building</a>
+                        <a href="#meet-your-founder" class="secondarybtn watch-intro-btn">
+        <i class="fas fa-play me-2"></i>watch intro
+    </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-dot"></div>
+                            <div class="terminal-title">app.js</div>
+                        </div>
+                        <div class="terminal-content">
+                            <div id="typingText" class="typing-text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why 16-year-olds Choose LaunchCode -->
+    <section id="why-16-year-olds" class="why-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Why 16-Year-Olds Choose LaunchCode</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="why-card glass-card text-center">
+                        <div class="why-icon">
+                            <i class="fab fa-facebook neon-text"></i>
+                        </div>
+                        <h4>Perfect Age to Start</h4>
+                        <p>Mark Zuckerberg created Facebook when he was 19. You're starting even earlier! The perfect age to build your future in tech and get ahead of the curve.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="why-card glass-card text-center">
+                        <div class="why-icon">
+                            <i class="fab fa-microsoft neon-text"></i>
+                        </div>
+                        <h4>Follow the Giants</h4>
+                        <p>Bill Gates started Microsoft at 20. Steve Jobs founded Apple at 21. You have the advantage of starting your tech journey even younger than these legends.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="why-card glass-card text-center">
+                        <div class="why-icon">
+                            <i class="fas fa-brain neon-text"></i>
+                        </div>
+                        <h4>Peak Learning Age</h4>
+                        <p>Your brain is at its most adaptable. Learn faster, think differently, and build the skills that will define the next decade of technology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Journey Timeline -->
+        <section id="timeline-section" class="timeline-section">
+        <div class="timeline-container">
+            <h2 class="section-header">The Journey</h2>
+            <!-- Timeline Items will be injected by JS -->
+            <div class="timeline-wrapper" id="timeline-wrapper">
+                <div class="timeline-line-container">
+                    <div class="timeline-line-static"></div>
+                    <div class="timeline-line-gradient"></div>
+                </div>
+                <!-- Timeline items will be rendered here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section py-5" id="meet-your-founder">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video-container glass-card">
+                        <h3 class="text-center mb-4">Meet Your Founder</h3>
+                        <div class="video-wrapper">
+                            <video controls class="w-100" style="border-radius: 12px;">
+                                <source src="assets/launchcode video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="key-takeaways mt-4">
+                            <h5>Key Takeaways:</h5>
+                            <ul>
+                                <li>Why I started LaunchCode at 16</li>
+                                <li>The future of coding education</li>
+                                <li>How to build real-world projects</li>
+                                <li>Community-driven learning approach</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Create -->
+    <section class="create-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What You'll Create in LaunchCode</h2>
+            <div class="row create-cards-row">
+                <div class="col-lg-4 mb-4">
+                    <div class="create-card glass-card">
+                        <div class="create-icon">
+                            <i class="fas fa-mobile-alt neon-text"></i>
+                        </div>
+                        <h4>Responsive Websites</h4>
+                        <p>Build stunning, mobile-first websites that work perfectly on any device. Master HTML5, CSS3, and modern design principles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="create-card glass-card">
+                        <div class="create-icon">
+                            <i class="fab fa-react neon-text"></i>
+                        </div>
+                        <h4>Interactive React Apps</h4>
+                        <p>Create dynamic, interactive applications using React. Build everything from todo apps to social media dashboards.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="create-card glass-card">
+                        <div class="create-icon">
+                            <i class="fas fa-palette neon-text"></i>
+                        </div>
+                        <h4>Beautiful UI/UX Designs</h4>
+                        <p>Learn design thinking and create user interfaces that are both beautiful and functional. Master Figma and design systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-stack-wall-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Your Tech Stack Wall</h2>
+    <div class="tech-stack-wall mx-auto" id="techStackWall">
+      
+      <!-- Blocks will be injected by JS -->
+       <div class="wall-line"></div>
+    </div>
+  </div>
+</section>
+
+    <!-- Meet Your Tech Mentor -->
+    <section class="mentor-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                            <h2 class="section-title text-center mb-5">Meet Your <span class="highlight">Tech Mentor</span></h2>
+                
+                        <div class="col-lg-6">
+                    <div class="spacer" style="height: 60px;"></div>
+                    <div class="mentor-card glass-card text-center">
+                        <div class="mentor-avatar">
+                            <img src="assets/me.png" alt="Nachiketh Reddy" class="rounded-circle">
+                        </div>
+                        <h4 class="mt-3">Nachiketh Reddy</h4>
+                        <p class="mentor-title">Founder & Lead Instructor</p>
+                        <p>16-year-old entrepreneur passionate about making coding accessible to everyone. Building the future of tech education, one student at a time.
+                            Hey there! I'm Nachiketh, and I'm here to help you unlock your potential in tech. I started coding at your age and know exactly what it takes to go from beginner to builder. Let's turn your ideas into reality together!
+                        </p>
+                        <div class="mentor-links">
+                            <a href="https://www.linkedin.com/in/ynr-nachiketh-reddy" class="social-link me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/nachikethreddyy" class="social-link me-3" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="mailto:y.nachiketh.reddy@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- By the Numbers -->
+    <section class="numbers-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">By the Numbers</h2>
+            <div class="row text-center">
+                <div class="col-lg-4 mb-4">
+                    <div class="number-card glass-card">
+                        <h3 class="counter neon-text" data-target="300">0</h3>
+                        <p>Students Joined</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="number-card glass-card">
+                        <h3 class="counter neon-text" data-target="6">0</h3>
+                        <p>Courses Available</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="number-card glass-card">
+                        <h3 class="counter neon-text" data-target="101">0</h3>
+                        <p>Projects Created</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- From Our Students -->
+    <section class="success-stories py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">From Our Students</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="success-card glass-card">
+                        <div class="success-avatar">
+                            <img src="assets/sarah-chen.png" alt="Sarah Chen">
+                        </div>
+                        <h4>Sarah Chen, 17</h4>
+                        <p class="success-role">Apple Scholarship Recipient</p>
+                        <p>"Started with zero coding knowledge. Now I'm building apps and received the Apple Developer Scholarship!"</p>
+                        <div class="success-achievement">
+                            <i class="fas fa-trophy sucess-icon3 sucess-icon2-small"></i>
+                            <span>WWDC App Award Winner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="success-card glass-card">
+                        <div class="success-avatar">
+                            <img src="assets/mkbhd.jpeg" alt="Marques Brownlee">
+                        </div>
+                        <h4>Marcus Johnson, 16</h4>
+                        <p class="success-role">Google Code-in Winner</p>
+                        <p>"My open-source contributions through LaunchCode helped me win Google Code-in and connect with amazing developers!"</p>
+                        <div class="success-achievement">
+                            <i class="fas fa-rocket sucess-icon3 sucess-icon2-small"></i>
+                            <span>Open Source Contributor</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="success-card glass-card">
+                        <div class="success-avatar">
+                            <img src="assets/zoe.png" alt="Zoe Martinez">
+                        </div>
+                        <h4>Zoe Martinez, 18</h4>
+                        <p class="success-role">Microsoft Student Ambassador</p>
+                        <p>"From struggling with HTML to becoming a Microsoft Student Ambassador. The journey was incredible!"</p>
+                        <div class="success-achievement">
+                            <i class="fas fa-brain sucess-icon3 sucess-icon2-small"></i>
+                            <span>Tech Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Join Our Community</h2>
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="community-card glass-card text-center">
+                        <div class="community-icon">
+                            <i class="fab fa-discord neon-text"></i>
+                        </div>
+                        <h5>Discord Community</h5>
+                        <p>500+ members with 24/7 activity</p>
+                        <span class="member-count">Active Now</span><br>
+                        <button class="btn btn-primary neon-btn mt-3" onclick="window.open('https://discord.gg/8J3JWVJW', '_blank')">Join Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="community-card glass-card text-center">
+                        <div class="community-icon">
+                            <i class="fas fa-code neon-text"></i>
+                        </div>
+                        <h5>Code Challenges</h5>
+                        <p>Weekly prizes and exciting competitions await.</p>
+                        <span class="member-count">New Challenge</span><br>
+                    <button class="btn btn-primary neon-btn mt-3" onclick="window.open('https://discord.gg/8J3JWVJW', '_blank')">View Challenges</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="community-card glass-card text-center live-session-purple">
+                        <div class="community-icon">
+                            <i class="fas fa-video neon-text"></i>
+                        </div>
+                        <h5>Live Sessions</h5>
+                        <p>Live streams with expert guests and Q&A.</p>
+                        <span class="member-count">Next: TBC</span><br>
+                        <button class="btn btn-primary neon-btn mt-3" onclick="window.open('events.html', '_blank')">View Sessions</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <div class="community-card glass-card text-center live-session-green">
+                        <div class="community-icon">
+                            <i class="fas fa-users neon-text"></i>
+                        </div>
+                        <h5>Study Groups</h5>
+                        <p>Collaborative learning sessions and peer support.</p>
+                        <span class="member-count">Join Today</span><br>
+                        
+                        <button class="btn btn-primary neon-btn mt-3" onclick="window.open('https://discord.gg/8J3JWVJW', '_blank')">Access study groups</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+                    <div class="community-special glass-card text-center">
+                        <h3>What Makes Our Community Special</h3>
+                        <p>We're not just teaching code - we're building the next generation of tech leaders. Join a community where your ideas matter and your growth is celebrated.</p>
+                        <div class="community-cta mt-4">
+                            <h4 class="neon-cta-text mb-3">Ready to Change Your Life?</h4>
+                            <a href="courses.html" class="btn btn-primary neon-btn me-3">
+                                <i class="fas fa-book me-2"></i>View Courses
+                            </a> <br>
+                            <a href="signup.html" class="btn btn-outline-light">
+                                <i class="fas fa-rocket me-2"></i>Register Your Interest
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-4">
+                    <div class="footer-logos">
+                        <div class="logo-container">
+                            <img src="assets/sp.svg" alt="SP" style = "width: 75px">
+                            <div class="x-divider">×</div>
+                            <img src="assets/nachikethreddy.svg" alt="nachiketh Reddy" style = "width: 75px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="terminal-section">
+                        <div class="terminal-line">
+                            <span class="terminal-user">nachikethreddy</span>
+                            <span class="terminal-symbol">$</span>
+                            <span class="terminal-path">~</span>
+                            <span class="terminal-quote">"The only way to do great work is to love what you do"</span>
+                            <span class="terminal-hashtag">#CodeForChange</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Singapore</p>
+                        <p><i class="fas fa-phone me-2"></i>+65 8898 3832</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/ynr-nachiketh-reddy" class="social-link me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/nachikethreddyy" class="social-link me-3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:y.nachiketh.reddy@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-love">
+                        <p>Made with <i class="fas fa-heart text-danger"></i> by Nachiketh Reddy</p>
+                        <p>&copy; 2025 Nachiketh Reddy. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script>
+        // Add active state to navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Only prevent default for in-page anchors
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                }
+                // Remove active from all links in the same navigation
+                const isDesktop = this.closest('.nav-capsule');
+                const isMobile = this.closest('.mobile-nav-links');
+                if (isDesktop) {
+                    document.querySelectorAll('.nav-capsule .nav-link').forEach(l => l.classList.remove('active'));
+                } else if (isMobile) {
+                    document.querySelectorAll('.mobile-nav-links .nav-link').forEach(l => l.classList.remove('active'));
+                }
+                // Add active to clicked link
+                this.classList.add('active');
+            });
+        });
+
+        // Animate scroll to video section for "watch intro" button
+        const watchIntroBtn = document.querySelector('.watch-intro-btn');
+        if (watchIntroBtn) {
+            watchIntroBtn.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.getBoundingClientRect().top + window.pageYOffset - 40,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

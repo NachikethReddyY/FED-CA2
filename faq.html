@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - LaunchCode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/navigation.css">
+</head>
+<body>
+    <!-- Logo for mobile, above hero section -->
+    <div class="mobile-logo-bar d-lg-none" style="width:100%;padding:24px 0 0 0;display:flex;justify-content:left;align-items:center;position:relative;z-index:1;">
+        <a class="navbar-brand logo-brand" href="index.html" style="margin-left:24px;">
+            <i class="fas fa-rocket me-2"></i>LaunchCode
+        </a>
+    </div>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav d-none d-lg-flex">
+        <div class="container">
+            <a class="navbar-brand logo-brand" href="index.html" style="margin-left:0;">
+                <i class="fas fa-rocket me-2"></i>LaunchCode
+            </a>
+            <div class="nav-center">
+                <ul class="nav-capsule">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="signup.html" class="btn btn-primary nav-cta-btn" style="margin-right:0;">
+                    <i class="fas fa-user-plus me-1"></i>Register Interest
+                </a>
+            </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <div class="mobile-nav-content">
+        <ul class="mobile-nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="signup.html" class="btn btn-primary nav-cta-btn" style="width:100%;text-align:center;">
+                <i class="fas fa-user-plus me-1"></i>Register Interest
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="hero-title mb-4">
+                        Got <span class="neon-text">Questions</span>? 
+                        We've Got <span class="gradient-text-new">Answers</span>
+                    </h1>
+                    <p class="hero-subtitle">Everything you need to know about starting your coding journey with LaunchCode. Still can't find what you're looking for? Hit us up on Discord!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Tabs -->
+    <section class="faq-tabs py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title">Choose Your Question Category</h2>
+                </div>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10">
+                    <ul class="nav nav-pills faq-nav-pills justify-content-center" id="faqTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="getting-started-tab" data-bs-toggle="pill" data-bs-target="#getting-started" type="button" role="tab">
+                                <i class="fas fa-play-circle me-2"></i>Getting Started
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="impacts-benefits-tab" data-bs-toggle="pill" data-bs-target="#impacts-benefits" type="button" role="tab">
+                                <i class="fas fa-star me-2"></i>Impacts & Benefits
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="future-prospects-tab" data-bs-toggle="pill" data-bs-target="#future-prospects" type="button" role="tab">
+                                <i class="fas fa-rocket me-2"></i>Future Prospects
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="challenges-tab" data-bs-toggle="pill" data-bs-target="#challenges" type="button" role="tab">
+                                <i class="fas fa-mountain me-2"></i>Challenges
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content py-5">
+        <div class="container">
+            <div class="tab-content" id="faqTabContent">
+                <!-- Getting Started FAQs -->
+                <div class="tab-pane fade show active" id="getting-started" role="tabpanel">
+                    <h3 class="category-title mb-4 text-center">🚀 Getting Started</h3>
+                
+                <div class="accordion" id="gettingStartedAccordion">
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                I've never coded before. Is LaunchCode right for me?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#gettingStartedAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Absolutely! That's exactly who we designed our programs for.</strong></p>
+                                <p>95% of our students start with zero coding experience. We begin with the absolute basics and build up gradually. Our youngest successful graduate was 15, and our oldest was 19 – but most of our students are exactly your age (16) when they start.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How much time do I need to commit each week?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#gettingStartedAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Plan for 8-12 hours per week, but it's flexible around your school schedule.</strong></p>
+                                <p>Here's how our students typically break it down:</p>
+                                <ul>
+                                    <li><strong>Weekdays:</strong> 1-2 hours after school</li>
+                                    <li><strong>Saturdays:</strong> 3-4 hours (morning sessions are popular!)</li>
+                                    <li><strong>Sundays:</strong> 2-3 hours (great for reviewing)</li>
+                                </ul>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Do I need an expensive computer or special software?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#gettingStartedAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Nope! Any computer from the last 5 years will work perfectly.</strong></p>
+                                <p><strong>Here's what you actually need:</strong></p>
+                                <ul>
+                                    <li><strong>Computer:</strong> Windows, Mac, or even a decent Chromebook</li>
+                                    <li><strong>Internet:</strong> Reliable connection (doesn't need to be super fast)</li>
+                                    <li><strong>Software:</strong> Everything we use is completely free</li>
+                                </ul>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Impacts & Benefits FAQs -->
+                <div class="tab-pane fade" id="impacts-benefits" role="tabpanel">
+                    <h3 class="category-title mb-4 text-center">⭐ Impacts & Benefits</h3>
+                
+                <div class="accordion" id="impactsAccordion">
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                How will LaunchCode change my life?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#impactsAccordion">
+                            <div class="accordion-body">
+                                <p><strong>LaunchCode opens doors you never knew existed.</strong></p>
+                                <p>Beyond just learning to code, you'll develop problem-solving skills, logical thinking, and creativity that apply to every area of life. Many students report improved grades in math and science after joining our program.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                Will this help with college applications?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#impactsAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Absolutely! Coding projects make incredible additions to college applications.</strong></p>
+                                <p>Admissions officers love seeing students who take initiative to learn valuable skills outside of school. Your portfolio of projects will set you apart from other applicants.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Future Prospects FAQs -->
+                <div class="tab-pane fade" id="future-prospects" role="tabpanel">
+                    <h3 class="category-title mb-4 text-center">🚀 Future Prospects</h3>
+                
+                <div class="accordion" id="futureAccordion">
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                What career opportunities will I have?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#futureAccordion">
+                            <div class="accordion-body">
+                                <p><strong>The tech industry is booming with opportunities for young developers.</strong></p>
+                                <p>You could become a frontend developer, UI/UX designer, freelance web developer, or even start your own tech company. Many of our graduates have received internship offers from major tech companies.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                                Can I start earning money while still in high school?
+                            </button>
+                        </h2>
+                        <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#futureAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Yes! Many of our students start freelancing within 6 months.</strong></p>
+                                <p>Once you complete a few courses, you'll have the skills to take on small web development projects. Some students earn $500-1000 per month doing freelance work while still in school.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Challenges FAQs -->
+                <div class="tab-pane fade" id="challenges" role="tabpanel">
+                    <h3 class="category-title mb-4 text-center">⛰️ Challenges</h3>
+                
+                <div class="accordion" id="challengesAccordion">
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                                What if I get stuck or want to quit?
+                            </button>
+                        </h2>
+                        <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#challengesAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Everyone hits roadblocks - that's completely normal!</strong></p>
+                                <p>We have multiple support systems in place: 24/7 Discord community, weekly mentor sessions, study groups, and office hours. Remember, every expert was once a beginner who refused to give up.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item glass-card mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                                How do I balance LaunchCode with school work?
+                            </button>
+                        </h2>
+                        <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#challengesAccordion">
+                            <div class="accordion-body">
+                                <p><strong>Time management is key, and we'll help you develop this crucial skill.</strong></p>
+                                <p>Most students find that the problem-solving skills they learn in coding actually help them with their regular schoolwork. We also offer flexible scheduling and can adjust deadlines during exam periods.</p>
+                                <div class="faq-voting mt-3">
+                                    <p class="mb-2">Was this helpful?</p>
+                                    <div class="voting-buttons">
+                                        <button class="btn btn-sm btn-outline-success vote-btn me-2" data-vote="up">
+                                            <i class="fas fa-thumbs-up"></i> Yes
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-danger vote-btn" data-vote="down">
+                                            <i class="fas fa-thumbs-down"></i> No
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Still Have Questions -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-content glass-card">
+                        <h2 class="mb-4 text-center">Still got a glitch in your matrix?</h2>
+                        <p class="text-center mb-4">Drop us a message and we'll debug it together!</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactName" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="contactName">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="contactEmail">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">Message</label>
+                                <textarea class="form-control" id="contactMessage" rows="5"></textarea>
+                                <div class="form-text">6-1000 characters</div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary neon-btn">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-4">
+                    <div class="footer-logos">
+                        <div class="logo-container">
+                            <img src="assets/sp.svg" alt="SP" style = "width: 75px">
+                            <div class="x-divider">×</div>
+                            <img src="assets/nachikethreddy.svg" alt="nachiketh Reddy" style = "width: 75px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="terminal-section">
+                        <div class="terminal-line">
+                            <span class="terminal-user">nachikethreddy</span>
+                            <span class="terminal-symbol">$</span>
+                            <span class="terminal-path">~</span>
+                            <span class="terminal-quote">"The only way to do great work is to love what you do"</span>
+                            <span class="terminal-hashtag">#CodeForChange</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Singapore</p>
+                        <p><i class="fas fa-phone me-2"></i>+65 8898 3832</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/ynr-nachiketh-reddy" class="social-link me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/nachikethreddyy" class="social-link me-3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:y.nachiketh.reddy@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-love">
+                        <p>Made with <i class="fas fa-heart text-danger"></i> by Nachiketh Reddy</p>
+                        <p>&copy; 2025 Nachiketh Reddy. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card">
+                <div class="modal-body text-center">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle fa-4x neon-text mb-4"></i>
+                    </div>
+                    <h2 class="mb-3">Message Sent! 🚀</h2>
+                    <p class="mb-4">Thanks for reaching out! We'll get back to you soon. Check your inbox for updates!</p>
+                    <button type="button" class="btn btn-primary neon-btn" data-bs-dismiss="modal">
+                        <i class="fas fa-rocket me-2"></i>Awesome!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/faq.js"></script>
+    <script src="scripts/navigation.js"></script>
+</body>
+</html>

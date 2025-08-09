@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - LaunchCode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./styles/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/navigation.css">
+</head>
+<body>
+    <!-- Logo for mobile, above hero section -->
+    <div class="mobile-logo-bar d-lg-none" style="width:100%;padding:24px 0 0 0;display:flex;justify-content:left;align-items:center;position:relative;z-index:1;">
+        <a class="navbar-brand logo-brand" href="index.html" style="margin-left:24px;">
+            <i class="fas fa-rocket me-2"></i>LaunchCode
+        </a>
+    </div>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav d-none d-lg-flex">
+        <div class="container">
+            <a class="navbar-brand logo-brand" href="index.html" style="margin-left:0;">
+                <i class="fas fa-rocket me-2"></i>LaunchCode
+            </a>
+            <div class="nav-center">
+                <ul class="nav-capsule">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="signup.html" class="btn btn-primary nav-cta-btn" style="margin-right:0;">
+                    <i class="fas fa-user-plus me-1"></i>Register Interest
+                </a>
+            </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <button class="mobile-nav-toggle" aria-label="Toggle mobile navigation">
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
+
+    <div class="mobile-nav-content">
+        <ul class="mobile-nav-links">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+            <a href="signup.html" class="btn btn-primary nav-cta-btn" style="width:100%;text-align:center;">
+                <i class="fas fa-user-plus me-1"></i>Register Interest
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="hero-title mb-4">
+                        Where <span class="neon-text">Code</span> Meets 
+                        <span class="gradient-text-new">Community</span>
+                    </h1>
+                    <p class="hero-subtitle">Join thousands of young developers at our epic events. From hackathons that last all night to chill coding sessions with pizza – there's something for every type of coder!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Banner -->
+    <section class="coming-soon-banner py-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="coming-soon-content glass-card text-center">
+                        <h3 class="neon-text mb-2">🚀 Epic Events Coming Soon!</h3>
+                        <p class="mb-3">We're planning some INCREDIBLE events for 2024. Think hackathons with $10K prizes, exclusive meetups with YouTube coding stars, and workshops that'll blow your mind!</p>
+                        <a href="signup.html" class="btn btn-primary neon-btn">
+                            <i class="fas fa-bell me-2"></i>Get Notified First
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Events Section -->
+    <section class="search-events-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4">
+                        <h2 class="section-title text-center mb-4">Search Events</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" id="event-search-input" class="form-control" placeholder="Search by event name, type, or keyword...">
+                            <button class="btn btn-primary neon-btn" id="event-search-btn" type="button"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div id="event-search-results" class="search-results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Categories -->
+    <section class="event-categories py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">What's Coming Up</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="event-category glass-card">
+                        <div class="category-icon">
+                            <i class="fas fa-trophy neon-text"></i>
+                        </div>
+                        <h4>Hackathons</h4>
+                        <p>48-hour coding marathons with insane prizes</p>
+                        <div class="category-preview">
+                            <span class="badge coming-soon-badge">Coming March 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="event-category glass-card">
+                        <div class="category-icon">
+                            <i class="fas fa-users neon-text"></i>
+                        </div>
+                        <h4>Meetups</h4>
+                        <p>Chill hangouts with fellow young developers</p>
+                        <div class="category-preview">
+                            <span class="badge coming-soon-badge">Weekly Starting Feb 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="event-category glass-card">
+                        <div class="category-icon">
+                            <i class="fas fa-graduation-cap neon-text"></i>
+                        </div>
+                        <h4>Workshops</h4>
+                        <p>Deep-dive sessions on trending tech</p>
+                        <div class="category-preview">
+                            <span class="badge coming-soon-badge">Monthly Starting Jan 2026</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="event-category glass-card">
+                        <div class="category-icon">
+                            <i class="fas fa-microphone neon-text"></i>
+                        </div>
+                        <h4>Tech Talks</h4>
+                        <p>Industry leaders sharing real insights</p>
+                        <div class="category-preview">
+                            <span class="badge coming-soon-badge">Bi-weekly Starting 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events We're Planning -->
+    <section class="upcoming-events py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Events We're Planning</h2>
+            
+            <!-- Feature Event -->
+            <div class="feature-event mb-5">
+                        <div class="event-content glass-card">
+                            <div class="event-header">
+                                <span class="event-badge neon-badge">MEGA HACKATHON</span>
+                                <span class="event-date">March 15-17, 2026</span>
+                            </div>
+                            <h3>LaunchHack 2025: "Build the Future"</h3>
+                            <p class="event-description">
+                                The biggest teen hackathon on the West Coast! 48 hours of pure coding madness with $25,000 in prizes. 
+                                Teams of 4 will compete to build apps that solve real-world problems. Previous winners have gone on to start 
+                                companies, get featured on TechCrunch, and land internships at major tech companies.
+                            </p>
+                            
+                            <div class="event-details">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="detail-item">
+                                            <i class="fas fa-map-marker-alt neone-text"></i>
+                                            <div>
+                                                <h6>Location</h6>
+                                                <p>San Francisco Convention Center</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="detail-item">
+                                            <i class="fas fa-dollar-sign neone-text"></i>
+                                            <div>
+                                                <h6>Prize Pool</h6>
+                                                <p>$25,000 + Internship Offers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="detail-item">
+                                            <i class="fas fa-users neone-text"></i>
+                                            <div>
+                                                <h6>Expected Attendance</h6>
+                                                <p>500+ Young Developers</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="event-highlights">
+                                <h5>What Makes This Epic:</h5>
+                                <ul>
+                                    <li><i class="fas fa-check epic-text"></i> Judges from Google, Apple, and Netflix</li>
+                                    <li><i class="fas fa-check epic-text"></i> Free food, energy drinks, and swag for 48 hours</li>
+                                    <li><i class="fas fa-check epic-text"></i> Workshops by YouTube coding influencers</li>
+                                    <li><i class="fas fa-check epic-text"></i> Live streaming on Twitch with 10K+ viewers</li>
+                                    <li><i class="fas fa-check epic-text"></i> VR/AR stations and latest tech demos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Other Upcoming Events -->
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="event-card glass-card">
+                        <div class="event-image">
+                            <div class="event-type-badge">WORKSHOP</div>
+                            <i class="fas fa-mobile-alt event-icon"></i>
+                        </div>
+                        <div class="event-info">
+                            <h4>Mobile App Masterclass</h4>
+                            <p class="event-date">February 10, 2026 • 2:00 PM PST</p>
+                            <p>Build and deploy your first mobile app in 3 hours. We'll cover React Native basics and get your app on the App Store!</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 50 spots</span>
+                                <span><i class="fas fa-clock"></i> 3 hours</span>
+                                <span><i class="fas fa-globe"></i> Virtual</span>
+                            </div>
+                            <a href="signup.html" class="btn btn-outline-light btn-sm">
+                                Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="event-card glass-card">
+                        <div class="event-image">
+                            <div class="event-type-badge">MEETUP</div>
+                            <i class="fas fa-coffee event-icon"></i>
+                        </div>
+                        <div class="event-info">
+                            <h4>Coffee & Code Sessions</h4>
+                            <p class="event-date">Every Saturday Starting 2026 • 10:00 AM PST</p>
+                            <p>Casual hangouts where we code together, share projects, and help each other debug. Free coffee and pastries!</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 25 spots</span>
+                                <span><i class="fas fa-clock"></i> 2 hours</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Local cafes</span>
+                            </div>
+                            <a href="signup.html" class="btn btn-outline-light btn-sm">
+                                Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="event-card glass-card">
+                        <div class="event-image">
+                            <div class="event-type-badge">TECH TALK</div>
+                            <i class="fas fa-brain event-icon"></i>
+                        </div>
+                        <div class="event-info">
+                            <h4>AI Revolution: What's Next?</h4>
+                            <p class="event-date">January 25, 2026 • 7:00 PM PST</p>
+                            <p>Special guest speaker from OpenAI discusses the future of AI and how young developers can get involved.</p>
+                            <div class="event-stats">
+                                <span><i class="fas fa-users"></i> 200 spots</span>
+                                <span><i class="fas fa-clock"></i> 1.5 hours</span>
+                                <span><i class="fas fa-globe"></i> Virtual + Q&A</span>
+                            </div>
+                            <a href="signup.html" class="btn btn-outline-light btn-sm">
+                                Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+        <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-4">
+                    <div class="footer-logos">
+                        <div class="logo-container">
+                            <img src="assets/sp.svg" alt="SP" style = "width: 75px">
+                            <div class="x-divider">×</div>
+                            <img src="assets/nachikethreddy.svg" alt="nachiketh Reddy" style = "width: 75px">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="terminal-section">
+                        <div class="terminal-line">
+                            <span class="terminal-user">nachikethreddy</span>
+                            <span class="terminal-symbol">$</span>
+                            <span class="terminal-path">~</span>
+                            <span class="terminal-quote">"The only way to do great work is to love what you do"</span>
+                            <span class="terminal-hashtag">#CodeForChange</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Singapore</p>
+                        <p><i class="fas fa-phone me-2"></i>+65 8898 3832</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/ynr-nachiketh-reddy" class="social-link me-3" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/nachikethreddyy" class="social-link me-3" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:y.nachiketh.reddy@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-end">
+                    <div class="footer-love">
+                        <p>Made with <i class="fas fa-heart text-danger"></i> by Nachiketh Reddy</p>
+                        <p>&copy; 2025 Nachiketh Reddy. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script>
+// --- Fabricated event data ---
+const fabricatedEvents = [
+  {
+    name: "LaunchHack 2025: Build the Future",
+    type: "Hackathon",
+    date: "March 15-17, 2026",
+    desc: "48 hours of coding, $25,000 in prizes, teams of 4, live streaming, and more!",
+    location: "San Francisco Convention Center"
+  },
+  {
+    name: "Mobile App Masterclass",
+    type: "Workshop",
+    date: "February 10, 2026",
+    desc: "Build and deploy your first mobile app in 3 hours. React Native basics included.",
+    location: "Virtual"
+  },
+  {
+    name: "Coffee & Code Sessions",
+    type: "Meetup",
+    date: "Every Saturday Starting 2026",
+    desc: "Casual hangouts, code together, share projects, free coffee and pastries!",
+    location: "Local cafes"
+  },
+  {
+    name: "AI Revolution: What's Next?",
+    type: "Tech Talk",
+    date: "January 25, 2026",
+    desc: "OpenAI guest speaker on the future of AI and how young devs can get involved.",
+    location: "Virtual + Q&A"
+  },
+  {
+    name: "Frontend Bootcamp",
+    type: "Workshop",
+    date: "April 2026",
+    desc: "Master HTML, CSS, and JavaScript in a weekend crash course.",
+    location: "Virtual"
+  },
+  {
+    name: "NextGen Web Summit",
+    type: "Conference",
+    date: "May 2026",
+    desc: "A gathering of the brightest young web developers. Keynotes, panels, and networking.",
+    location: "Los Angeles, CA"
+  },
+  {
+    name: "Python for Teens",
+    type: "Workshop",
+    date: "June 2026",
+    desc: "Learn Python basics and build your first automation scripts.",
+    location: "Virtual"
+  },
+  {
+    name: "Game Jam 2026",
+    type: "Hackathon",
+    date: "July 2026",
+    desc: "48 hours to build a game from scratch. Prizes for creativity and gameplay!",
+    location: "Virtual"
+  },
+  {
+    name: "Women in Tech Meetup",
+    type: "Meetup",
+    date: "August 2026",
+    desc: "Empowering young women in tech. Talks, networking, and mentorship.",
+    location: "San Francisco, CA"
+  },
+  {
+    name: "Cloud Computing Bootcamp",
+    type: "Workshop",
+    date: "September 2026",
+    desc: "Get hands-on with AWS, Azure, and Google Cloud. Deploy your first app to the cloud!",
+    location: "Virtual"
+  },
+  {
+    name: "JavaScript Olympics",
+    type: "Competition",
+    date: "October 2026",
+    desc: "Compete in JS challenges and win cool prizes. Open to all skill levels.",
+    location: "Virtual"
+  },
+  {
+    name: "Startup Pitch Night",
+    type: "Event",
+    date: "November 2026",
+    desc: "Pitch your tech idea to a panel of investors and win seed funding.",
+    location: "Palo Alto, CA"
+  },
+  {
+    name: "Cybersecurity Crash Course",
+    type: "Workshop",
+    date: "December 2026",
+    desc: "Learn how to protect your code and your data. Real-world hacking demos included!",
+    location: "Virtual"
+  },
+  {
+    name: "React Native Live Coding",
+    type: "Tech Talk",
+    date: "January 2027",
+    desc: "Watch a pro build a mobile app live and ask questions in real time.",
+    location: "Virtual + Q&A"
+  },
+  {
+    name: "AI for Good Hackathon",
+    type: "Hackathon",
+    date: "February 2027",
+    desc: "Build AI projects that make a difference. Prizes for impact and innovation.",
+    location: "Virtual"
+  },
+  {
+    name: "Design Thinking Workshop",
+    type: "Workshop",
+    date: "March 2027",
+    desc: "Master the art of user-centric design. Includes Figma crash course.",
+    location: "Virtual"
+  }
+];
+
+function renderEventResults(events) {
+  const results = document.getElementById('event-search-results');
+  if (!events.length) {
+    results.innerHTML = '<div class="text-center" style="color:#fff;">No events found.</div>';
+    return;
+  }
+  results.innerHTML = events.map(event => `
+    <div class="glass-card mb-3 p-3">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="badge bg-primary me-2">${event.type}</span>
+        <span class="event-date-white small">${event.date}</span>
+      </div>
+      <h5 class="mb-1">${event.name}</h5>
+      <p class="mb-1">${event.desc}</p>
+      <div class="event-location-white small"><i class="fas fa-map-marker-alt me-1"></i>${event.location}</div>
+    </div>
+  `).join('');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const input = document.getElementById('event-search-input');
+  const btn = document.getElementById('event-search-btn');
+  // Hide all events by default
+  renderEventResults([]);
+
+  function doSearch() {
+    const q = input.value.trim().toLowerCase();
+    if (!q) {
+      renderEventResults([]);
+      return;
+    }
+    const filtered = fabricatedEvents.filter(ev =>
+      ev.name.toLowerCase().includes(q) ||
+      ev.type.toLowerCase().includes(q) ||
+      ev.desc.toLowerCase().includes(q) ||
+      ev.location.toLowerCase().includes(q)
+    );
+    renderEventResults(filtered);
+  }
+
+  input.addEventListener('input', doSearch);
+  btn.addEventListener('click', doSearch);
+});
+</script>
+</body>
+</html>
